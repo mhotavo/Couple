@@ -16,10 +16,11 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-6">
-          <p><?php echo  $datos['UltimaVez']; ?> <small> (<?php echo $datos['Dias']; ?> días)</small></p>
+          <p><?php echo  $datos['UltimaVez']; ?> <small> (<?php echo $datos['TotalSex']; ?> días)</small></p>
           <p ><?php echo $datos['TotalSex']; ?> veces</p>
         </div>
       </div>
+      <hr style="margin:0px">
       <div class="row">
         <div class="col-xs-6 col-sm-6  ">
           <p  class="text-primary">
@@ -28,6 +29,7 @@
         </div>
         <div class="col-xs-6 col-sm-6"><p ><?php echo $datos['Total69']; ?> veces</p></div>
       </div>
+      <hr style="margin:0px">
       <div class="row">
         <div class="col-xs-6 col-sm-6  ">
           <p  class="text-primary">
@@ -36,6 +38,7 @@
         </div>
         <div class="col-xs-6 col-sm-6"><p ><?php echo ($datos['TotalOralEl']); ?> veces</p>  </div>
       </div>
+      <hr style="margin:0px">
       <div class="row">
         <div class="col-xs-6 col-sm-6  ">
           <p  class="text-primary">
@@ -44,6 +47,7 @@
         </div>          
         <div class="col-xs-6 col-sm-6"><p ><?php echo $datos['TotalOralElla']; ?> veces</p></div>
       </div>
+      <hr style="margin:0px">
       <div class="row" style="font-weight: bold">
         <div class="col-xs-6 col-sm-6">
           <p  class="text-danger">Ultimo 
@@ -52,6 +56,7 @@
         </div>
         <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['UltimoAndres']; ?></b></p></div>
       </div>
+      <hr style="margin:0px">
       <div class="row" style="font-weight: bold">
         <div class="col-xs-6 col-sm-6">
           <p  class="text-danger">Proximo
