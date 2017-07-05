@@ -26,6 +26,7 @@ class Login extends CI_Controller {
 					'login' => true
 					);
 				$this->session->set_userdata($data);
+				header("Location:" . base_url().'home' );
 			} else {
 				header("Location:" . base_url());
 			}
