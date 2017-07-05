@@ -66,11 +66,7 @@
 </div>
 
 <?php $this->load->view('overall/footer'); ?> 
-<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/jquery.dataTables.js"></script>
-<script type="text/javascript" src="<?= base_url(); ?>public/plugins/datatables/js/dataTables.bootstrap.js"></script>
-<script type="text/javascript">
-
-</script>
+ 
 
 </body>
 
