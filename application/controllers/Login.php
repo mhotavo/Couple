@@ -6,23 +6,28 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->session->sess_destroy();
-		$this->load->view('login');
+		if ($this->session->userdata('login')) {
+			header("Location:" . base_url().'home' );
+		} else {
+			$this->load->view('login');
+		}
+		
 	}
 
 	public function form()
 	{
 		$inputUser  = $this->input->post('usuario');
-		$inpurPass  = $this->input->post('contrasena');
+		$inputPass  = $this->input->post('contrasena');
 
 		$this->load->model('user');
 		$fila=$this->user->getUser($inputUser);
 
 		if ($fila!=null) {
-			if ($fila->PASS == $inpurPass ) {
+			if ($fila->PASS == $inputPass ) {
 				$data = array (
-					'user'  => $inputUser,
-					'id'    => 0,
+					'id'    => $fila->ID,
+					'user'  => $fila->USER,
+					'name'  => $fila->NOMBRES . ' ' . $fila->P_APELLIDO,
 					'login' => true
 					);
 				$this->session->set_userdata($data);
@@ -33,14 +38,12 @@ class Login extends CI_Controller {
 		} else {
 			header("Location:" . base_url());
 		}
+	}
 
-	/*	
-		
-
-	echo $this->session->userdata('id'); */
-
-}
-
-
+	public function logout()
+	{
+		$this->session->sess_destroy();
+		header("Location:" . base_url());
+	}
 
 }

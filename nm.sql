@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2017 a las 22:45:09
+-- Tiempo de generación: 06-07-2017 a las 22:18:02
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -23,28 +23,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tema`
+-- Estructura de tabla para la tabla `evento`
 --
 
-CREATE TABLE `tema` (
-  `ID_TEMA` int(11) NOT NULL,
-  `TEMA` varchar(50) NOT NULL,
-  `DESCRIPCION` text NOT NULL,
+CREATE TABLE `evento` (
+  `ID_EVENTO` int(11) NOT NULL,
+  `LUGAR` varchar(50) NOT NULL,
+  `TIPO` text NOT NULL,
+  `DESCRIPCION` text,
   `FECHA` date DEFAULT NULL,
   `USUARIOLOG` bigint(11) NOT NULL,
   `FECHALOG` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Volcado de datos para la tabla `tema`
+-- Volcado de datos para la tabla `evento`
 --
 
-INSERT INTO `tema` (`ID_TEMA`, `TEMA`, `DESCRIPCION`, `FECHA`, `USUARIOLOG`, `FECHALOG`) VALUES
-(1, '', 'Andres', '2017-02-14', 1, '2017-02-28 19:47:29'),
-(2, 'Casa Nicol', 'Sex', '2017-01-26', 1, '2017-02-28 19:48:15'),
-(3, 'Casa Milton', 'El', '2017-02-22', 1, '2017-02-28 19:48:34'),
-(4, 'Casa Milton', 'El', '2017-02-17', 1, '2017-02-28 19:49:06'),
-(5, 'Casa Nicol', 'Sex', '2017-02-08', 1, '2017-02-28 19:49:47');
+INSERT INTO `evento` (`ID_EVENTO`, `LUGAR`, `TIPO`, `DESCRIPCION`, `FECHA`, `USUARIOLOG`, `FECHALOG`) VALUES
+(1, '', 'Andres', NULL, '2017-02-14', 1, '2017-02-28 19:47:29'),
+(2, 'Casa Nicol', 'Sex', NULL, '2017-01-26', 1, '2017-02-28 19:48:15'),
+(3, 'Casa Milton', 'El', NULL, '2017-02-22', 1, '2017-02-28 19:48:34'),
+(4, 'Casa Milton', 'El', NULL, '2017-02-17', 1, '2017-02-28 19:49:06');
 
 -- --------------------------------------------------------
 
@@ -74,10 +74,10 @@ INSERT INTO `usuarios` (`ID`, `USER`, `PASS`, `EMAIL`, `NOMBRES`, `P_APELLIDO`, 
 --
 
 --
--- Indices de la tabla `tema`
+-- Indices de la tabla `evento`
 --
-ALTER TABLE `tema`
-  ADD PRIMARY KEY (`ID_TEMA`);
+ALTER TABLE `evento`
+  ADD PRIMARY KEY (`ID_EVENTO`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -90,10 +90,10 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `tema`
+-- AUTO_INCREMENT de la tabla `evento`
 --
-ALTER TABLE `tema`
-  MODIFY `ID_TEMA` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `evento`
+  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
