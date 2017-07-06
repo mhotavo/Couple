@@ -49,8 +49,8 @@
                   <td><?php  echo  $row->LUGAR; ?></td>
                   <td><?php  echo $row->FECHA ?></td>
                   <td>
-                    <a  class="btn btn-warning" href="<?= base_url(); ?>Temas/editar/<?php echo  $row->ID_EVENTO; ?>">Editar&nbsp;</a> 
-                    <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este familiar?','<?= base_url(); ?>Temas/eliminar/<?php echo  $row->ID_EVENTO; ?>')" >Borrar</a> 
+                    <a  class="btn btn-warning" href="<?= base_url(); ?>eventos/editar/<?php echo  $row->ID_EVENTO; ?>">Editar&nbsp;</a> 
+                    <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este familiar?','<?= base_url(); ?>eventos/eliminar/<?php echo  $row->ID_EVENTO; ?>')" >Borrar</a> 
                   </td>
                 </tr>
                 <?php 

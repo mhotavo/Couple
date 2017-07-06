@@ -1,7 +1,6 @@
 <?php $this->load->view('overall/header'); ?>
 <body>
   <?php $this->load->view('overall/nav'); ?>
-
   <div class="container">
     <h3 align="center">Registro <i class="fa fa-transgender" aria-hidden="true"></i></h3> 
     <br>

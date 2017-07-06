@@ -10,7 +10,11 @@ class Evento extends CI_Model
 	public $FECHA;
 	public $USUARIOLOG;
 
-
+	public function get_evento()
+	{
+		$query = $this->db->get('evento');
+		return $query->result();
+	}
 
 	public function get_all()
 	{
@@ -28,6 +32,15 @@ class Evento extends CI_Model
 			$this->USUARIOLOG     = $this->session->userdata('id');
 			$this->db->insert('evento', $this);
 		}
+	}
+
+	public function update_entry()
+	{
+		$this->title    = $_POST['title'];
+		$this->content  = $_POST['content'];
+		$this->date     = time();
+
+		$this->db->update('entries', $this, array('id' => $_POST['id']));
 	}
 
 

@@ -37,6 +37,27 @@ class Eventos extends CI_Controller {
 		
 	}
 
+	public function editar()
+	{
+		if ($this->session->userdata('login')) {
+
+			if ($_POST) {
+				$evento = $this->input->post();
+				$this->load->model('evento');
+				$this->evento->add($evento);
+				header("Location:" . base_url());
+			} else {
+				#Vista
+				$this->load->helper('form');
+				$this->load->view('eventos/editar');
+			}
+
+		} else {
+			header("Location:" . base_url());
+		}		
+		
+	}
+
 }
 
 
