@@ -7,8 +7,6 @@ class Eventos extends CI_Controller {
 	public function index()
 	{
 		if ($this->session->userdata('login')) {
-
-			$this->load->model('evento');
 			$data['eventos']  =$this->evento->get_all();
 			$this->load->view('eventos/index', $data);
 		} else {
@@ -22,7 +20,6 @@ class Eventos extends CI_Controller {
 
 			if ($_POST) {
 				$evento = $this->input->post();
-				$this->load->model('evento');
 				$this->evento->add($evento);
 				header("Location:" . base_url());
 			} else {
@@ -43,15 +40,35 @@ class Eventos extends CI_Controller {
 
 			if ($_POST) {
 				$evento = $this->input->post();
-				$this->load->model('evento');
-				$this->evento->add($evento);
+				$evento['id']=  $this->uri->segment(3);
+				$this->evento->update($evento);
 				header("Location:" . base_url());
 			} else {
 				#Vista
+				$id             = $this->uri->segment(3);
+				$data['evento'] = $this->evento->get_evento($id);
 				$this->load->helper('form');
-				$this->load->view('eventos/editar');
-			}
+				$this->load->view('eventos/editar', $data);
 
+			}
+		} else {
+			header("Location:" . base_url());
+		}		
+		
+	}
+
+	public function eliminar()
+	{
+		if ($this->session->userdata('login')) {
+			$id = $this->uri->segment(3);
+
+			if ($id!='') {
+				$this->evento->delete($id);
+				header("Location:" . base_url());
+
+			} else {
+				header("Location:" . base_url());
+			}
 		} else {
 			header("Location:" . base_url());
 		}		

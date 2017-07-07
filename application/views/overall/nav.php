@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" style="font-size: 17px" href="<?= base_url(); ?>Statistics"><b>Couples</b>  <b></b></a>
+      <a class="navbar-brand" style="font-size: 17px" href="<?= base_url(); ?>"><b>Couples</b>  <b></b></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav">
@@ -17,7 +17,7 @@
        <li><a href="<?= base_url(); ?>eventos"> Listar <i class="fa fa-list" aria-hidden="true"></i></i></a></li> 
      </ul>
      <ul class="nav navbar-nav">
-       <li><a href="<?= base_url(); ?>Statistics"> informe <i class="fa fa-bar-chart" aria-hidden="true"></i></i></i></a></li> 
+       <li><a href="<?= base_url(); ?>"> informe <i class="fa fa-bar-chart" aria-hidden="true"></i></i></i></a></li> 
      </ul>
      <ul class="nav navbar-nav navbar-right">
 

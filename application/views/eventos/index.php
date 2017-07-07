@@ -30,19 +30,22 @@
                   <a style="text-decoration: none;" href="<?= base_url(); ?>eventos/ver/<?php echo  $row->ID_EVENTO; ?>"> 
                     <?php switch ( $row->TIPO) {
                       case 'Andres':
-                      echo '<img src="'.base_url().'apublic/images/andres.png" alt="Sex" width="40">';
+                      echo '<img src="'.base_url().'public/images/andres.png" alt="Sex" width="40">';
                       break;
                       case 'Sex':
-                      echo '<img src="'.base_url().'apublic/images/sex.png" alt="Sex" width="60">';
+                      echo '<img src="'.base_url().'public/images/sex.png" alt="Sex" width="60">';
                       break;
                       case '69':
-                      echo '<img src="'.base_url().'apublic/images/69.png" alt="Total 69" width="70">';
+                      echo '<img src="'.base_url().'public/images/69.png" alt="Total 69" width="70">';
                       break;
                       case 'El':
-                      echo '<img src="'.base_url().'apublic/images/oralElla.png" alt="Oral a el" width="40">';
+                      echo '<img src="'.base_url().'public/images/oralElla.png" alt="Oral a el" width="40">';
                       break;
                       case 'Ella':
-                      echo '<img src="'.base_url().'apublic/images/oralEl.png" alt="Oral a ella" width="70">';
+                      echo '<img src="'.base_url().'public/images/oralEl.png" alt="Oral a ella" width="70">';
+                      break;
+                      case 'Inyeccion':
+                      echo '<img src="'.base_url().'public/images/inyeccion.png" alt="Cyclofem" width="50">';
                       break;
                     }   ?> </a>
                   </td>
@@ -50,7 +53,7 @@
                   <td><?php  echo $row->FECHA ?></td>
                   <td>
                     <a  class="btn btn-warning" href="<?= base_url(); ?>eventos/editar/<?php echo  $row->ID_EVENTO; ?>">Editar&nbsp;</a> 
-                    <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este familiar?','<?= base_url(); ?>eventos/eliminar/<?php echo  $row->ID_EVENTO; ?>')" >Borrar</a> 
+                    <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este evento?','<?= base_url(); ?>eventos/eliminar/<?php echo  $row->ID_EVENTO; ?>')" >Borrar</a> 
                   </td>
                 </tr>
                 <?php 
@@ -74,7 +77,7 @@
           "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
           "autoWidth": true,           
           "sPaginationType": "full_numbers",
-          "order": [[ 1, 'desc' ]]
+          "order": [[ 1, 'asc' ]]
         });
       } );
     </script>

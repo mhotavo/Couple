@@ -12,13 +12,13 @@
         <div class="form-group">
          <label for="" class="col-lg-2 control-label">Lugar</label>
          <div class="col-lg-10">
-           <input type="text" class="form-control" name="lugar" placeholder="Casa">
+           <input type="text" class="form-control" name="lugar" id="lugar" placeholder="Casa">
          </div>
        </div>		 
        <div class="form-group">
-         <label for="inputPrimerApellido" class="col-lg-2 control-label">Tipo</label>
+         <label for="" class="col-lg-2 control-label">Tipo</label>
          <div class="col-lg-10">
-           <select name="tipo"  class="form-control">
+           <select name="tipo" id="tipo" class="form-control">
              <option value="">[...]</option>
              <option value="Andres">Regla</option>
              <option value="Sex">Sex</option>
@@ -32,13 +32,13 @@
        <div class="form-group">
          <label for="" class="col-lg-2 control-label">Descripcion</label>
          <div class="col-lg-10">
-          <textarea  type="text" class="form-control" name="descripcion"  rows="10" required></textarea>
+          <textarea  type="text" class="form-control" name="descripcion" id="descripcion"  rows="5" required></textarea>
         </div>
       </div> 
       <div class="form-group">
        <label for="" class="col-lg-2 control-label">Fecha</label>
        <div class="col-lg-10">
-         <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">
+         <input type="date" class="form-control" name="fecha"  id="fecha" value="<?php echo date('Y-m-d'); ?>">
        </div>
      </div>			    	        
 
