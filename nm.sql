@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-07-2017 a las 22:18:02
+-- Tiempo de generación: 07-07-2017 a las 17:51:27
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -41,10 +41,11 @@ CREATE TABLE `evento` (
 --
 
 INSERT INTO `evento` (`ID_EVENTO`, `LUGAR`, `TIPO`, `DESCRIPCION`, `FECHA`, `USUARIOLOG`, `FECHALOG`) VALUES
-(1, '', 'Andres', NULL, '2017-02-14', 1, '2017-02-28 19:47:29'),
-(2, 'Casa Nicol', 'Sex', NULL, '2017-01-26', 1, '2017-02-28 19:48:15'),
-(3, 'Casa Milton', 'El', NULL, '2017-02-22', 1, '2017-02-28 19:48:34'),
-(4, 'Casa Milton', 'El', NULL, '2017-02-17', 1, '2017-02-28 19:49:06');
+(1, '', 'Andres', '.', '2017-06-04', 1, '2017-07-07 17:42:20'),
+(2, '', 'Inyeccion', '.', '2017-06-04', 1, '2017-07-07 17:43:23'),
+(3, '', 'Inyeccion', '.', '2017-07-04', 1, '2017-07-07 17:45:06'),
+(4, '', 'Andres', '.', '2017-05-06', 1, '2017-07-07 17:46:42'),
+(5, 'Casa Nicol', 'Sex', 'Sin condón, nos escondimos de Charith.', '2017-06-09', 1, '2017-07-07 17:47:59');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
