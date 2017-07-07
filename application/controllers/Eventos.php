@@ -75,6 +75,23 @@ class Eventos extends CI_Controller {
 		
 	}
 
+	public function ver()
+	{
+		if ($this->session->userdata('login')) {
+
+			#Vista
+			$id             = $this->uri->segment(3);
+			$data['evento'] = $this->evento->get_evento($id);
+			$this->load->helper('form');
+			$this->load->view('eventos/ver', $data);
+
+
+		} else {
+			header("Location:" . base_url());
+		}		
+		
+	}
+
 }
 
 

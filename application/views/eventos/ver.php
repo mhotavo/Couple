@@ -1,14 +1,14 @@
   <html>
   <head>
-  	<?php include(HTML_DIR.'/overall/header.php') ?>
+  	<?php $this->load->view('overall/header'); ?>
   </head>
   <body>
-  	<?php include(HTML_DIR.'/overall/nav.php') ?>
+  	<?php $this->load->view('overall/nav'); ?>
   	<div  class="container">
   		<br>
   		<div class="panel panel-success">
   			<div class="panel-heading">
-  				<h3 class="panel-title" align="center"> <?php echo  $datos['TEMA'] ;    ?></h3>
+  				<h3 class="panel-title" align="center"><?php echo $evento[0]->TIPO;?></h3>
   			</div>
   			<div class="panel-body">
   				<div class="row">
@@ -23,28 +23,28 @@
 				<div class="form-horizontal" >
 					<fieldset>
 						<div class="form-group">
-							<label for="inputNombres" class="col-lg-2 control-label"><b>Tema</b></label>
+							<label for="inputNombres" class="col-lg-2 control-label"><b>Lugar</b></label>
 							<div class="ver col-lg-10">
-								<?php echo $datos['TEMA']; ?>
+								<?php echo $evento[0]->LUGAR;?>
 							</div>
 						</div>		
 						<div class="form-group">
 							<label for="inputPrimerApellido" class="col-lg-2 control-label"><b>Descripción</b></label>
 							<div class="ver col-lg-10">
-								<?php echo str_replace("\n", "<br>", $datos['DESCRIPCION']) ; ?>
+								<?php echo str_replace("\n", "<br>",  $evento[0]->DESCRIPCION) ; ?>
 							</div>
 						</div>		
 						<div class="form-group">
 							<label for="inputSegundoApellido" class="col-lg-2 control-label"><b>Fecha<b></label>
 							<div class="ver col-lg-10">
-								<?php echo $datos['FECHA']; ?>
+								<?php echo $evento[0]->FECHA; ?>
 							</div>
 						</div>			    	        
 
 						<div class="form-group">
 							<label for="inputDireccion" class="col-lg-2 control-label"><b>Registrado por</b></label>
 							<div class="ver col-lg-10">
-								<?php echo ucwords(strtolower($datos['NOMBRES'] . " " . $datos['P_APELLIDO'])) ; ?>
+								<?php #echo ucwords(strtolower($datos['NOMBRES'] . " " . $datos['P_APELLIDO'])) ; ?>
 							</div>
 						</div> 
 					</div>
@@ -58,6 +58,6 @@
 		<div class="col-md-2"></div>
 	</div>
 </div>  
-<?php include(HTML_DIR.'/overall/footer.php') ?> 
+<?php $this->load->view('overall/footer'); ?>
 </body>
 </html>   
