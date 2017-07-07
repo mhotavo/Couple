@@ -77,7 +77,7 @@
           "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
           "autoWidth": true,           
           "sPaginationType": "full_numbers",
-          "order": [[ 1, 'asc' ]]
+          "order": [[ 2, 'desc' ]]
         });
       } );
     </script>
