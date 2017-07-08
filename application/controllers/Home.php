@@ -17,7 +17,20 @@ class Home extends CI_Controller {
 			$ProximoAndres=$this->evento->ProximoAndres();
 			$ProximaInyeccion=$this->evento->ProximaInyeccion();
 
-			
+			#Dias de cuanto fue la última vez
+			$dateUltimaVez = new DateTime($UltimaVez->FECHA);
+			$hoy = new DateTime(date("Y-m-d"));
+			$interval = $dateUltimaVez->diff($hoy);
+			$dias=$interval->format('Hace %a día(s)');
+			#Dias desde la ultima regla
+			$ultRegla = new DateTime($UltimoAndres->FECHA);
+			$interval = $hoy->diff($ultRegla);
+			$diasRegla=$interval->format('Hace %a día(s)');
+			#Dias proxima regla
+			$proximaRegla = new DateTime($ProximoAndres->NEXT);
+			$interval = $hoy->diff($proximaRegla);
+			$diasProximaRegla=$interval->format('Hace %a día(s)');
+
 			$data['datos'] = array(
 				"UltimaVez" => $UltimaVez->FECHA,
 				#"PrimeraVez" => $PrimeraVez,
@@ -28,6 +41,9 @@ class Home extends CI_Controller {
 				"UltimoAndres" => $UltimoAndres->FECHA,
 				"ProximoAndres" => $ProximoAndres->NEXT,
 				"ProximaInyeccion" => $ProximaInyeccion->NEXT,
+				"diasUltimaVez" => $dias,
+				"diasRegla" => $diasRegla,
+				"diasProximaRegla" => $diasProximaRegla,
 				);
 
 			$this->load->view('home/index', $data);

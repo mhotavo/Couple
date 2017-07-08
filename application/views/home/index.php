@@ -12,7 +12,7 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-6">
-          <p><?php echo $datos['UltimaVez'] ?> <small> (<?php   ?> días)</small></p>
+          <p><?php echo $datos['UltimaVez'] ?> <br> <small style="font-size:11px;"> <?php  echo $datos['diasUltimaVez']; ?> </small></p>
           <p ><?php echo $datos['TotalSex']; ?> veces</p>
         </div>
       </div>
@@ -50,7 +50,7 @@
             <i class="fa fa-venus text-danger" aria-hidden="true"></i>
           </p>
         </div>
-        <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['UltimoAndres']; ?></b></p></div>
+        <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['UltimoAndres']; ?></b> <br> <small style="font-size:11px;font-weight: normal"> <?php  echo $datos['diasRegla']; ?> </small></div>
       </div>
 
       <div class="row" style="font-weight: bold">
@@ -59,7 +59,9 @@
            <i class="fa fa-venus text-danger" aria-hidden="true"></i>
          </p>
        </div>
-       <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['ProximoAndres']; ?></b></p></div>
+       <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['ProximoAndres']; ?></b>
+  <br> <small style="font-size:11px;font-weight: normal"> <?php  echo $datos['diasProximaRegla']; ?> </small>
+       </p></div>
      </div>
      <hr style="margin:0px">
      <div class="row" style="font-weight: bold">
