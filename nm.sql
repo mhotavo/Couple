@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2017 a las 17:51:27
+-- Tiempo de generación: 08-07-2017 a las 13:27:41
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -42,10 +42,20 @@ CREATE TABLE `evento` (
 
 INSERT INTO `evento` (`ID_EVENTO`, `LUGAR`, `TIPO`, `DESCRIPCION`, `FECHA`, `USUARIOLOG`, `FECHALOG`) VALUES
 (1, '', 'Andres', '.', '2017-06-04', 1, '2017-07-07 17:42:20'),
-(2, '', 'Inyeccion', '.', '2017-06-04', 1, '2017-07-07 17:43:23'),
-(3, '', 'Inyeccion', '.', '2017-07-04', 1, '2017-07-07 17:45:06'),
+(2, 'Famarcia', 'Inyeccion', 'Cyclofem', '2017-06-04', 1, '2017-07-07 18:41:54'),
+(3, 'Profamilia', 'Inyeccion', 'Cyclofem', '2017-07-04', 1, '2017-07-07 18:41:40'),
 (4, '', 'Andres', '.', '2017-05-06', 1, '2017-07-07 17:46:42'),
-(5, 'Casa Nicol', 'Sex', 'Sin condón, nos escondimos de Charith.', '2017-06-09', 1, '2017-07-07 17:47:59');
+(5, 'Casa Nicol', 'Sex', 'Sin condón, nos escondimos de Charith.', '2017-06-09', 1, '2017-07-07 17:47:59'),
+(6, 'Casa Nicol', 'Sex', 'Mientras Charith estaba en otra habitación,  un poco de sangrado. ', '2017-06-24', 1, '2017-07-07 18:01:14'),
+(7, 'Casa Nicol', 'El', 'Mientras Charith estaba en el 2do piso con la prima', '2017-07-04', 1, '2017-07-07 18:12:12'),
+(8, 'Casa Milton', 'El', 'Mientras hacían tamales ', '2017-06-29', 1, '2017-07-07 18:14:16'),
+(9, 'Casa Nicol', 'Sex', 'Dos veces, luego de ducharse sin condón.\r\nCuando Diana estaba en el segundo piso, vestido rosado. ', '2017-06-16', 1, '2017-07-07 18:22:08'),
+(10, '', 'Andres', '.', '2017-03-13', 1, '2017-07-07 18:19:52'),
+(11, 'Casa Milton', 'El', '.', '2017-02-22', 1, '2017-07-07 18:21:22'),
+(12, 'Casa Milton', 'El', '.', '2017-02-17', 1, '2017-07-07 18:21:55'),
+(13, '', 'Andres', '.', '2017-02-14', 1, '2017-07-07 18:23:16'),
+(14, 'Casa Nicol', 'Sex', 'Luego del grupo, mientras veíamos la serie. \r\nSin condón', '2017-06-10', 1, '2017-07-07 18:33:00'),
+(15, 'Casa Nicol', 'Sex', 'Día que se le fue andres, sin condon.\r\nDiana se fue a bailar con felipe', '2017-05-13', 1, '2017-07-07 18:35:59');
 
 -- --------------------------------------------------------
 
@@ -94,7 +104,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
