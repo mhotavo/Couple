@@ -60,20 +60,22 @@
          </p>
        </div>
        <div class="col-xs-6 col-sm-6"><p class="text-danger"><b><?php echo $datos['ProximoAndres']; ?></b>
-  <br> <small style="font-size:11px;font-weight: normal"> <?php  echo $datos['diasProximaRegla']; ?> </small>
-       </p></div>
-     </div>
-     <hr style="margin:0px">
-     <div class="row" style="font-weight: bold">
+        <br> <small style="font-size:11px;font-weight: normal"> <?php  echo $datos['diasProximaRegla']; ?> </small>
+      </p></div>
+    </div>
+    <hr style="margin:0px">
+    <div class="row" style="font-weight: bold">
       <div class="col-xs-6 col-sm-6">
         <p  class="text-info">Proxima Inyección
          <i class="fa fa-venus text-info" aria-hidden="true"></i>
        </p>
      </div>
-     <div class="col-xs-6 col-sm-6"><p class="text-info"><b><?php echo $datos['ProximaInyeccion']; ?></b></p></div>
-   </div>
+     <div class="col-xs-6 col-sm-6"><p class="text-info"><b><?php echo $datos['ProximaInyeccion']; ?></b>
+      <br> <small style="font-size:11px;font-weight: normal"> <?php  echo $datos['diasProxInyec']; ?> </small>
+    </p></div>
+  </div>
 
- </div>
+</div>
 </div>  
 </div>
 

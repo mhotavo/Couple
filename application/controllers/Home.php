@@ -29,7 +29,11 @@ class Home extends CI_Controller {
 			#Dias proxima regla
 			$proximaRegla = new DateTime($ProximoAndres->NEXT);
 			$interval = $hoy->diff($proximaRegla);
-			$diasProximaRegla=$interval->format('Hace %a día(s)');
+			$diasProximaRegla=$interval->format('En %a día(s)');
+			#Dias proxima inyeccion
+			$proxInyec = new DateTime($ProximaInyeccion->NEXT);
+			$interval = $hoy->diff($proxInyec);
+			$diasProxInyec=$interval->format('En %a día(s)');
 
 			$data['datos'] = array(
 				"UltimaVez" => $UltimaVez->FECHA,
@@ -44,6 +48,7 @@ class Home extends CI_Controller {
 				"diasUltimaVez" => $dias,
 				"diasRegla" => $diasRegla,
 				"diasProximaRegla" => $diasProximaRegla,
+				"diasProxInyec" => $diasProxInyec,
 				);
 
 			$this->load->view('home/index', $data);

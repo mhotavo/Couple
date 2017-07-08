@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-07-2017 a las 16:02:16
+-- Tiempo de generación: 08-07-2017 a las 16:32:36
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -58,7 +58,10 @@ INSERT INTO `evento` (`ID_EVENTO`, `LUGAR`, `TIPO`, `DESCRIPCION`, `FECHA`, `USU
 (15, 'Casa Nicol', 'Sex', 'Día que se le fue andres, sin condon.\r\nDiana se fue a bailar con felipe', '2017-05-13', 1, '2017-07-07 18:35:59'),
 (16, 'Casa Nicol', 'Sex', 'Dos veces sin condón, oral ambos, 69 y vídeo.', '2017-07-07', 1, '2017-07-08 13:29:22'),
 (17, '', 'Andres', '.', '2017-06-25', 1, '2017-07-08 15:19:08'),
-(18, '', 'Andres', '.', '2017-01-10', 1, '2017-07-08 15:21:16');
+(18, '', 'Andres', '.', '2017-01-10', 1, '2017-07-08 15:21:16'),
+(19, 'Casa Nicol', '69', '69 y mucho oral.\r\n', '2017-07-07', 1, '2017-07-08 16:04:51'),
+(20, 'Casa Nicol', 'Ella', 'Mas de media hora ', '2017-07-08', 1, '2017-07-08 16:05:20'),
+(21, 'Casa Nicol', 'El', 'Con xtime y video. ', '2017-07-07', 1, '2017-07-08 16:05:34');
 
 -- --------------------------------------------------------
 
@@ -107,7 +110,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID_EVENTO` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
