@@ -21,7 +21,7 @@ class Eventos extends CI_Controller {
 			if ($_POST) {
 				$evento = $this->input->post();
 				$this->evento->add($evento);
-				header("Location:" . base_url());
+				header("Location:" . base_url(). "eventos");
 			} else {
 				#Vista
 				$this->load->helper('form');
@@ -42,7 +42,7 @@ class Eventos extends CI_Controller {
 				$evento = $this->input->post();
 				$evento['id']=  $this->uri->segment(3);
 				$this->evento->update($evento);
-				header("Location:" . base_url());
+				header("Location:" . base_url(). "eventos");
 			} else {
 				#Vista
 				$id             = $this->uri->segment(3);
@@ -64,7 +64,7 @@ class Eventos extends CI_Controller {
 
 			if ($id!='') {
 				$this->evento->delete($id);
-				header("Location:" . base_url());
+				header("Location:" . base_url(). "eventos");
 
 			} else {
 				header("Location:" . base_url());

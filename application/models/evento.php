@@ -20,7 +20,7 @@ class Evento extends CI_Model
 
 	public function get_all()
 	{
-		$query = $this->db->get('evento');
+		$query = $this->db->query('SELECT * FROM evento ORDER BY FECHA ASC');
 		return $query->result();
 	}
 
