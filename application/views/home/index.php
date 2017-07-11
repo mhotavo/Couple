@@ -12,8 +12,11 @@
           </p>
         </div>
         <div class="col-xs-6 col-sm-6">
-          <p><?php echo $datos['UltimaVez'] ?> <br> <small style="font-size:11px;"> <?php  echo $datos['diasUltimaVez']; ?> </small></p>
-          <p ><?php echo $datos['TotalSex']; ?> veces</p>
+          <p>
+            <?php //echo $datos['UltimaVez'] ?> <br> 
+            <b> <?php echo $datos['TotalSex']; ?></b>
+            <small style="font-size:10px;"> - <?php  echo $datos['diasUltimaVez']; ?> </small> 
+          </p>
         </div>
       </div>
       <hr style="margin:0px">
@@ -23,7 +26,7 @@
             <img src="<?= base_url(); ?>public/images/69.png" alt="Total 69" width="70">
           </p>
         </div>
-        <div class="col-xs-6 col-sm-6"><p ><?php echo $datos['Total69']; ?> veces</p></div>
+        <div class="col-xs-6 col-sm-6"><p class="bold"><?php echo $datos['Total69']; ?></p></div>
       </div>
       <hr style="margin:0px">
       <div class="row">
@@ -32,7 +35,7 @@
             <img src="<?= base_url(); ?>public/images/oralElla.png" alt="Oral a el" width="40">
           </p>
         </div>
-        <div class="col-xs-6 col-sm-6"><p ><?php echo ($datos['TotalOralEl']); ?> veces</p>  </div>
+        <div class="col-xs-6 col-sm-6"><p ><?php echo ($datos['TotalOralEl']); ?></p>  </div>
       </div>
       <hr style="margin:0px">
       <div class="row">
@@ -41,7 +44,7 @@
             <img src="<?= base_url(); ?>public/images/oralEl.png" alt="Oral a ella" width="70">
           </p>
         </div>          
-        <div class="col-xs-6 col-sm-6"><p ><?php echo $datos['TotalOralElla']; ?> veces</p></div>
+        <div class="col-xs-6 col-sm-6"><p ><?php echo $datos['TotalOralElla']; ?></p></div>
       </div>
       <hr style="margin:0px">
       <div class="row" style="font-weight: bold">

@@ -93,8 +93,8 @@
                 }   ?> </a>
               </td>
               <td>
-                <a  class="btn btn-warning" href="<?= base_url(); ?>eventos/editar/<?php echo  $row->ID_EVENTO; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a> 
-                <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este evento?','<?= base_url(); ?>eventos/eliminar/<?php echo  $row->ID_EVENTO; ?>')" ><i class="fa fa-cog" aria-hidden="true"></i></a> 
+                <a  class="btn btn-warning" href="<?= base_url(); ?>eventos/editar/<?php echo  $row->ID_EVENTO; ?>"><i class="fa fa-cog" aria-hidden="true"></i></a> 
+                <a  class="btn btn-danger" onclick="DeleteItem('¿Está seguro de eliminar este evento?','<?= base_url(); ?>eventos/eliminar/<?php echo  $row->ID_EVENTO; ?>')" ><i class="fa fa-trash" aria-hidden="true"></i></a> 
               </td>
             </tr>
             <?php 
